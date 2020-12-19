@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::Get("/providers","GifProviderController@getProviders")->name("providers");
 Route::Get("/provider/{identifier}/stats","GifProviderController@getStats")->name("providers-stats");
 Route::Get("/gif/{keyword}","GifProviderController@keyword")->name("keyword");
+Route::Get("/gifs/{keyword}/stats","GifProviderController@keywordStats")->name("keyword-stats");
+Route::Post("/provider/{identifier}","GifProviderController@setProvider")->name("set-provider");
