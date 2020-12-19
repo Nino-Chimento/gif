@@ -16,6 +16,8 @@ class CreateKeywordsTable extends Migration
         Schema::create('keywords', function (Blueprint $table) {
             $table->id();
             $table->text("keyword");
+            $table->foreign('gifprovider_id')->references('id')->on('gifproviders');
+            $table->integer("count");
             $table->timestamps();
         });
     }

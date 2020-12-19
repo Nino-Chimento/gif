@@ -18,7 +18,7 @@ class CreateGifprovidersTable extends Migration
             $table->string('slug', 100);
             $table->text("description",100);
             $table->integer("calls");
-            $table->json('phone_numbers');
+            $table->json('credentials');
             $table->timestamps();
         });
     }

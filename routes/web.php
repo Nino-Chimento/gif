@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::Get("/providers","GifProviderController@getProviders")->name("providers");
+Route::Get("/provider/{identifier}/stats","GifProviderController@getStats")->name("providers-stats");
+Route::Get("/gif/{keyword}","GifProviderController@keyword")->name("keyword");
